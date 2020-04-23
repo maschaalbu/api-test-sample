@@ -1,28 +1,28 @@
-import com.sun.codemodel.JVar;
 import io.restassured.response.Response;
-import jdk.nashorn.internal.ir.CallNode;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class twitterTest {
+public class potterTest {
+
     @Test
-    public void twitterTest(){
-        //post auth token by using client id and client secret
-        Response generateBearerToken = given().auth().preemptive().basic("UMV83FX5oCMIKSPOVW5yxkWwO",
-                "E1dvO1nrWhPJzGgbph94DHpbOBDDB37m4thiCCCvjIl28YXCoR")
+    public void timelineEventbride() {
+        //post auth token by using client key and client secret
+        Response generateToken = given().auth().preemptive().basic("5R633HTOCYGJJR6PB6",
+                "V46KD5QGARQFXYJNMFQFDFEPCGNIYHXWBS2UFA2ZB6XBNF5Q24")
                 .contentType("application/x-www-form-urlencoded")
                 .formParam("grant_type", "client_credentials")
                 .when()
-                .post("https://api.twitter.com/oauth2/token");
+                .post("https://www.eventbrite.com/oauth/token");
         //.then().statusCode(200);
-        generateBearerToken.then().log().all().statusCode(200);
+        generateToken.then().log().all().statusCode(200);
 
-        String accessToken = generateBearerToken.then().extract().path("access_token");
+        String accessToken = generateToken.then().extract().path("access_token");
         System.out.println(accessToken);
+    }
+}
 
-        //get user timeline by using token
+       /* //get user timeline by using token
 
         Response getTimeline = given()
                 .header("Authorization", "Bearer " + accessToken )
@@ -43,12 +43,14 @@ public class twitterTest {
     }
 
 }
+
 //with the 1st request we are generating Bearer Token using api key,secret key, grant type and request url
+
 
 
 //get user timeline by using token
 
-        /*Response getTimeline = given()
+        Response getTimeline = given()
                 .header("Authorization", "Bearer" + accessToken)
                 .when()
                 .param("screen_name", "hello")
@@ -57,6 +59,6 @@ public class twitterTest {
 
         getTimeline.then().log().all().statusCode(200);
 
-        //verify text*/
+    //verify text
 
-
+*/
