@@ -16,12 +16,14 @@ public class MakeupApiTest {
 
         };
     }
+        /*
+          Very trivial request that searches for the particular product_type, brand..etc.
+          Gives us the list of products that corresponds given parameters.
+        */
 
     @Test (dataProvider = "userData")
     public void MakeupApiTest(String product, String brand, String priceGreater, String textPart){
-        /*Very trivial request that searches for the particular product_type with price_less_than 100.
-        Gives us the list of products that corresponds given parameters.
-        */
+
         Response filterProductsBy = given()  //the output of the GET call would be stored in the REST Assured ‘Response’ object
                 .when()
                 .param(product)
@@ -32,7 +34,7 @@ public class MakeupApiTest {
 
         filterProductsBy.then().log().all().statusCode(200);
 
-        //verify if there are text "Cheek" in the name of the product
+        //verify if there are some textValue in the name of the product
        String textValue = filterProductsBy.then().extract().path("name").toString();
 
         Assert.assertTrue(textValue.contains(textPart));
