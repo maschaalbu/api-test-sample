@@ -5,4 +5,10 @@
             <class name="ApiTest" />       <!-- we need to add the name of out created class -->
         </classes>
     </test>
+    <test name="API Test Date Example" >
+        <classes>                          <!-- we keep test and classes and will filter by class also possible to choose by package -->
+            <class name="ApiTest" />       <!-- we need to add the name of out created class -->
+        </classes>
+    </test>
+
 </suite>

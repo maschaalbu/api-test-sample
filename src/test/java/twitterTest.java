@@ -9,20 +9,22 @@ import static io.restassured.RestAssured.given;
 public class twitterTest {
     @Test
     public void twitterTest(){
-        //post auth token by using client id and client secret
+        /**post auth token by using client id and client secret
+         *
+         *  //get user timeline by using token (getTimeline)
+         *
+         *  //verify text with userTwit
+         */
         Response generateBearerToken = given().auth().preemptive().basic("UMV83FX5oCMIKSPOVW5yxkWwO",
                 "E1dvO1nrWhPJzGgbph94DHpbOBDDB37m4thiCCCvjIl28YXCoR")
                 .contentType("application/x-www-form-urlencoded")
                 .formParam("grant_type", "client_credentials")
                 .when()
                 .post("https://api.twitter.com/oauth2/token");
-        //.then().statusCode(200);
         generateBearerToken.then().log().all().statusCode(200);
 
         String accessToken = generateBearerToken.then().extract().path("access_token");
         System.out.println(accessToken);
-
-        //get user timeline by using token
 
         Response getTimeline = given()
                 .header("Authorization", "Bearer " + accessToken )
@@ -33,9 +35,7 @@ public class twitterTest {
 
         getTimeline.then().log().all().statusCode(200);
 
-        //verify text
         String userTwit = getTimeline.then().extract().path("text").toString();
-
         Assert.assertTrue(userTwit.contains("Hello"));
 
 

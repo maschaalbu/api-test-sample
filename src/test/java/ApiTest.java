@@ -5,15 +5,18 @@ import java.time.format.DateTimeFormatter;
 
 public class ApiTest {
 
-    /*public static void main(String[] args) {
-        System.out.println("Hello Mascha!!!");
-    }*/
+    /**
+     * public static void main(String[] args) {
+     *         System.out.println("Hello Mascha!!!");
+     *     }
+     *
+     *     @Test
+     *     public void firstTest() {
+     *         System.out.println("Hello Mascha!!!"); //test passes because we are not verifying anything
+     *
+     *     }
+     */
 
-    /*@Test
-    public void firstTest() {
-        System.out.println("Hello Mascha!!!"); //test passes because we are not verifying anything
-
-    }*/
 
     @Test
     public void currentDateTest(){
