@@ -25,7 +25,7 @@ public class EventbrideTest {
  *                 System.out.println(name); - print out the name of early created event
  *                 6) Gives me information about earlier created Yoga event (yogaEventInfo)
  *                 7) Check if given id is equal to the id of "Yoga" event (checkIfEventIdExist)
- *         // with given
+ *         
  */
         String accessToken = "2RP36W7I3GILDUCFJCPP";
 
