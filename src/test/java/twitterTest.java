@@ -43,20 +43,6 @@ public class twitterTest {
     }
 
 }
-//with the 1st request we are generating Bearer Token using api key,secret key, grant type and request url
 
-
-//get user timeline by using token
-
-        /*Response getTimeline = given()
-                .header("Authorization", "Bearer" + accessToken)
-                .when()
-                .param("screen_name", "hello")
-                .param("count", "1")
-                .get("https://api.twitter.com/1.1/statuses/user_timeline.json");
-
-        getTimeline.then().log().all().statusCode(200);
-
-        //verify text*/
 
 
