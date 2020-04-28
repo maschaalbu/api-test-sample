@@ -4,9 +4,6 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class EventbrideTest {
-    @Test
-    public void eventbrideTest(){
 /**
  *  String accessToken = "2RP36W7I3GILDUCFJCPP";
  *         Response authorizeMe = given()
@@ -27,6 +24,11 @@ public class EventbrideTest {
  *                 7) Check if given id is equal to the id of "Yoga" event (checkIfEventIdExist)
  *         
  */
+
+public class EventbrideTest {
+    @Test
+    public void eventbrideTest(){
+
         String accessToken = "2RP36W7I3GILDUCFJCPP";
 
         Response eventInfo = given()
