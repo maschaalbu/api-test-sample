@@ -69,8 +69,8 @@ public class EventbrideTest {
                 .get("https://www.eventbriteapi.com/v3/events/103816098746/");
         yogaEventInfo.then().log().all().statusCode(200);
 
-        String checkIfEventIdExist = yogaEventInfo.then().extract().path("id").toString();
-        Assert.assertTrue(checkIfEventIdExist.equals("103816098746"));
+        String checkIfEventIdExists = yogaEventInfo.then().extract().path("id").toString();
+        Assert.assertTrue(checkIfEventIdExists.equals("103816098746"));
     }
 
 }
