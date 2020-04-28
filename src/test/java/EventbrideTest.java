@@ -45,7 +45,7 @@ public class EventbrideTest {
                 .header("Authorization", "Bearer " + accessToken)
                 .when()
                 .get("https://www.eventbriteapi.com/v3/users/me/organizations/");
-        getOrganizationsList.then().log().all().statusCode(200);*/
+        getOrganizationsList.then().log().all().statusCode(200);
 
         Response createEvent = given()
                 .header("Authorization", "Bearer " + accessToken)
