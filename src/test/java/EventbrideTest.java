@@ -5,13 +5,10 @@ import org.testng.annotations.Test;
 import static io.restassured.RestAssured.given;
 
 /**
- *  String accessToken = "2RP36W7I3GILDUCFJCPP";
- *         Response authorizeMe = given()
- *                 .header("Authorization", "Bearer " + accessToken )
- *                 .when()
- *                 .get("https://www.eventbriteapi.com/v3/events/103069752404/"); // gets information about the event
- *                 (103069752404 - music band, 441236037992 ; 102967653022 - beauty, organization_id": "441236037992";
+ *  
+ *                 (103069752404 - music band event_id, 441236037992 ; 102967653022 - beauty, organization_id": "441236037992";
  *                 "Home film festival" my event - organization_id 283564553800; "Yoga" - event_id: 103816098746)
+ 
  *                 1) Gives information about particular event by event_id (eventInfo)
  *                 2) Gives information about my events with status "draft" (getMyEvents)
  *                 3) Gives me the list of my organizations (getOrganizationsList)
