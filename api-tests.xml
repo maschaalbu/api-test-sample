@@ -8,7 +8,19 @@
 
     <test name="API MakeUp Test" >
         <classes>
-            <class name="MakeupApiTest" />      
+            <class name="MakeupApiTest" />
+        </classes>
+    </test>
+
+    <test name="API Harry Potter Test" >
+        <classes>
+            <class name="PotterTest" />
+        </classes>
+    </test>
+
+    <test name="API Eventbride Test" >
+        <classes>
+            <class name="EventbrideTest" />
         </classes>
     </test>
 
